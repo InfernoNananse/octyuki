@@ -2,18 +2,20 @@
 <>
 <head>
     <meta charset='utf-8'>
-    <title>英単語レベル</title>
+    <title>Let's English</title>
     <script>function getlevel(){
-        if(document.getElementById('word').value == "yuki"){document.cookie = "yuki=True; path=/;";}else{
+        if(document.getElementById('word').value == "47800"){document.cookie = "yuki=True; path=/;";}else{
         let req = new XMLHttpRequest();
         req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
         req.open("GET", "/answer?q="+document.getElementById('word').value);
         req.send();}
     }</script>
 </head>
-    英単語のレベルを出します。<br>
-    その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。<br>
-    <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
+<h1>Welcome to this Website！</h1><br>
+【使い方】<br>
+1、下の文字を打つ枠に「47800」と入力し、枠の右にあるボタンを押します。 <br>
+2、URLの最後のword/の部分を削除し、再読み込みをしてください。<br>
+    <input id="word" type="text"></input><input type="button" value="check" onClick="getlevel()"></input>
     <div id="info">
 </body>
 </html>
